@@ -1,0 +1,36 @@
+# Cursor Rules per il Progetto React Native Reusables
+
+## Pattern Critici di Implementazione
+- Tutte le importazioni dai componenti UI devono usare il pattern `~/components/ui/[nome-componente]`
+- Librerie di utility dovrebbero essere importate da `~/lib/[nome-utility]`
+- Utilizzare sempre il pattern `asChild` quando si vuole sostituire l'elemento principale di un componente
+- Implementare sempre `React.forwardRef` per componenti che possono necessitare di riferimenti (input, etc.)
+
+## Preferenze e Workflow Utente
+- Preferire la sintassi TypeScript con tipizzazione esplicita
+- Mantenere la compatibilità cross-platform in tutto il codice
+- Documentare i componenti con esempi di utilizzo
+- Testare sempre i componenti su iOS e Android
+
+## Pattern Specifici del Progetto
+- Usare NativeWind per lo styling con classi nel formato `className="..."`
+- Implementare il supporto per temi chiari/scuri usando variabili CSS
+- Utilizzare l'inoltro delle prop con spread operator per mantenere le proprietà native
+- Separare i componenti in file individuali per mantenere il codice ordinato
+
+## Sfide Note
+- Adattare i componenti web per funzionare correttamente su piattaforme native
+- Gestire le differenze di layout tra iOS e Android
+- Ottimizzare le prestazioni dei componenti animati
+- Mantenere l'accessibilità su tutte le piattaforme
+
+## Evoluzione delle Decisioni del Progetto
+- Adozione di React Native Reusables come libreria di componenti principale
+- Focus sull'accessibilità come requisito fondamentale
+- Approccio component-first per lo sviluppo dell'interfaccia utente
+
+## Pattern di Utilizzo degli Strumenti
+- NativeWind per stili cross-platform
+- TypeScript per sicurezza dei tipi
+- @rn-primitives per componenti accessibili
+- react-native-reanimated per animazioni fluide
